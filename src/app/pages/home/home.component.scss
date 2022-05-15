@@ -1,0 +1,25 @@
+@import "/src/styles.scss";
+
+h1 {
+  display: block;
+  background-color: $principal-color;
+  border-radius: 20%;
+  text-transform: capitalize;
+  font-family: 'Lobster';
+  word-spacing: 4px;
+  letter-spacing: 5px;
+  font-size: 4rem;
+  text-align: center;
+  color: $secundary-color;
+  font-weight: 800;
+  width: 40%;
+}
+
+.principal-section {
+  background: url('/assets/gift-boxes.png');
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

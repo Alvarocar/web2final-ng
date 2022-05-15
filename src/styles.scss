@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@300&display=swap');
+
+$principal-color: #FFE59D;
+$secundary-color: #7D1E6A;
+$complement-color-1: #EEB0B0;
+$complement-color-2: #BDE6F1;
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: 'Roboto', monospace;
+}
+
+body {
+  background-color: $principal-color;
+}

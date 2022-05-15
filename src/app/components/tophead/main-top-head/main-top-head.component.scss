@@ -1,0 +1,56 @@
+@import '/src/styles.scss';
+
+header {
+  & h3 {
+    font-family: 'Lobster';
+    letter-spacing: 2px;
+    font-size: 2rem;
+  }
+  background-color: $secundary-color;
+  min-height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  color: #EEEEEE;
+  padding: 1rem 1rem;
+
+  & nav {
+    display: flex;
+    align-items: center;
+    & > ul {
+      display: flex;
+      gap: 1rem;
+      & a {
+        display: block;
+        padding: .5rem;
+        font-size: 1.4em;
+        font-weight: 800;
+        color: #EEEEEE;
+        transition: .2s ease-out all;
+        position: relative;
+        &:hover {
+          color: $complement-color-2;
+          transform: scale(1.02);
+          &::after {
+            width: 100%;
+          }
+        }
+        &::after {
+          content: '';
+          position: absolute;
+          background-color: $complement-color-2;
+          width: 0%;
+          height: 2px;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+          transition: .5s ease-out all;
+        }
+      }
+    }
+  }
+}
+
+.btn {
+
+}
