@@ -1,0 +1,25 @@
+@mixin input-text {
+    width: 100%;
+    padding: .3rem .5rem;
+    border-radius: 20px;
+    border: none;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1;
+    row-gap: 2rem;
+    padding: 2rem 1rem 4rem;
+    width: 40rem;
+    & label {
+
+    }
+
+    & input {
+        @include input-text;
+    }
+
+    & textarea {
+        @include input-text;
+    }
+}

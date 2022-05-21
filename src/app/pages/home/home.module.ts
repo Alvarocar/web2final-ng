@@ -3,17 +3,17 @@ import { CommonModule } from '@angular/common';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
-import { MainTopHeadComponent } from 'src/app/components/tophead/main-top-head/main-top-head.component';
+import { TopheadModule } from 'src/app/shared/tophead/tophead.module';
 
 
 @NgModule({
   declarations: [
     HomeComponent,
-    MainTopHeadComponent,
   ],
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    TopheadModule,
   ]
 })
 export class HomeModule { }

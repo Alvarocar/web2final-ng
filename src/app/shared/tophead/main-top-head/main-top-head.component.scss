@@ -10,7 +10,10 @@ header {
   min-height: 3rem;
   display: flex;
   justify-content: space-between;
-  color: #EEEEEE;
+  & a {
+    color: #EEEEEE;
+    cursor: pointer;
+  }
   padding: 1rem 1rem;
 
   & nav {
@@ -51,6 +54,3 @@ header {
   }
 }
 
-.btn {
-
-}
