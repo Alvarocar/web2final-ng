@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { PartyDto } from 'src/model/party';
 
 @Component({
   selector: 'app-create-event',
@@ -8,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 export class CreateEventComponent implements OnInit {
 
   constructor() { }
+
+  @Output() onSubmit = new EventEmitter<PartyDto>();
 
   ngOnInit(): void {
   }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-create-event-form',
@@ -8,6 +9,12 @@ import { Component, OnInit } from '@angular/core';
 export class CreateEventFormComponent implements OnInit {
 
   constructor() { }
+
+  public partyForm = new FormGroup({
+    event: new FormControl(''),
+    date: new FormControl(''),
+    description: new FormControl(''),
+  }) 
 
   ngOnInit(): void {
   }

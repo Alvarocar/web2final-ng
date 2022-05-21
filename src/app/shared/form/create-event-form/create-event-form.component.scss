@@ -1,8 +1,15 @@
+@import '/src/styles.scss';
+@import '/src/styles/buttons.scss';
+
+
 @mixin input-text {
     width: 100%;
-    padding: .3rem .5rem;
     border-radius: 20px;
     border: none;
+    transition: 2s ease-out all;
+    &:focus {
+        outline: solid 2px $secundary-color;
+    }
 }
 
 form {
@@ -12,14 +19,29 @@ form {
     padding: 2rem 1rem 4rem;
     width: 40rem;
     & label {
-
+        font-weight: 600;
+        letter-spacing: 2px;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
     }
 
     & input {
         @include input-text;
+        padding: .3rem .5rem;
     }
 
     & textarea {
         @include input-text;
+        resize: none;
+    }
+
+    & .btn-container {
+        display: flex;
+        justify-content: center;
+        & button {
+            @include btn($secundary-color, white);
+            @include btn-effect(#C96DB7);
+        }
     }
 }

@@ -1,16 +1,19 @@
-<form>
+<form [formGroup]="partyForm">
     <label>
         Event Name
-        <input type="text" name="" id="">
+        <input type="text" formControlName="event">
     </label>
     <label>
         Event Date
-        <input type="date" name="" id="">
+        <input type="date" formControlName="date">
     </label>
     <label>
         Description
-        <textarea cols="30" rows="10">
-            
+        <textarea cols="30" rows="10" formControlName="description">
         </textarea>
     </label>
+
+    <section class="btn-container">
+        <button type="submit"><span>Create Event</span></button>
+    </section>
 </form>
