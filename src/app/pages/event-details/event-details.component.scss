@@ -1,0 +1,57 @@
+@import '/src/styles/buttons.scss';
+@import '/src/styles.scss';
+
+article {
+  width: 70%;
+  background: #EEE;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 20px;
+
+  .card-body {
+    position: relative;
+    padding: 0 2rem;
+     padding-bottom: 4rem;
+     .date {
+       position: absolute;
+       top: 0;
+       right: 2rem;
+       font-size: 2rem;
+       font-weight: 500;
+     }
+     .money {
+      padding: 2rem 0;
+    }
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+  figure {
+    height: 20rem;
+    overflow: hidden;
+    margin-bottom: 4rem;
+    img {
+      width: 100%;
+    }
+  }
+
+  .btn {
+    display: block;
+    overflow: hidden;
+    width: 8rem;
+    text-align: center;
+    @include btn($secundary-color, white);
+    @include btn-effect(#5E35B1);
+    cursor: pointer;
+  }
+}
+
+main {
+  padding: 5rem 0;
+}
+
+.guests {
+  width: 80%;
+  margin: 0 auto;
+}

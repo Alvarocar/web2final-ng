@@ -1,0 +1,81 @@
+@import '/src/styles.scss';
+
+summary {
+  background: #EEE;
+  position: relative;
+  font-weight: 800;
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+  & h2 {
+    background: #EEE;
+    width: fit-content;
+  }
+  & div {
+    padding: 1rem 3rem;
+    background: url('/assets/gift-boxes.png');
+  }
+  cursor: pointer;
+  &::before {
+    content: '\25BA';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5rem;
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: $secundary-color;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    left: .5rem;
+    transition: .5s ease-out all;
+  }
+}
+
+.open {
+  &::before {
+    transform: rotate(90deg);
+    background: #5E35B1;
+  }
+}
+
+.avatar {
+  width: 2rem;
+}
+
+ul {
+  height: 0;
+  transition: .2s ease-out all;
+  display: flex;
+  flex-direction: column;
+  padding: .5rem 0;
+  gap: .5rem;
+  & li {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-weight: 900;
+    opacity: .7;
+    padding: 2rem 4rem;
+    margin: .1rem 0;
+    font-size: 1.2rem;
+    background: #EEE;
+    height: 0;
+    transition: .2s ease-out all;
+    &:hover {
+      transform: scale(1.04);
+    }
+  }
+
+
+}
+
+.display-list {
+  height: 100%;
+  & li {
+    height: 100%;
+  }
+}
