@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { GuestServiceService } from 'src/app/pages/join-party/services/guest-service.service';
+import { GuestDto } from 'src/model/guest';
 
 @Component({
   selector: 'app-guests',
@@ -7,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GuestsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private guestS: GuestServiceService) { }
 
   open = false
+
+  @Input('guest-list') list: GuestDto[]
 
   toggle() {
     this.open = !this.open
@@ -17,5 +21,6 @@ export class GuestsComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
 
 }

@@ -7,6 +7,6 @@
     </div>
   </summary>
   <ul [ngClass]="{'display-list': open}">
-    <li><img class="avatar" src="../../../../../assets/avatar-guests.png" alt=""> Participante 1</li>
+    <li *ngFor="let item of list"><img class="avatar" src="../../../../../assets/avatar-guests.png" alt=""> {{item.name}}</li>
   </ul>
 </details>

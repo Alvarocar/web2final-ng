@@ -9,22 +9,22 @@ import { PartyDto } from 'src/model/party';
 })
 export class ShowEventsComponent implements OnInit {
 
-  constructor(partyService: PartyServiceService) { }
+  constructor(private partyService: PartyServiceService) { }
 
   testEvent: PartyDto
 
   listEvents: PartyDto[]
 
   ngOnInit(): void {
-    this.testEvent = {
-      date: '12-02-2000',
-      description: 'lorem lorem lorem lorem lorem lorem',
-      event: 'TEST TITLE',
-      accumulated: 200,
-      id: 1,
-    }
+
+    this.partyService.getParties()
+    .subscribe(parties => {
+      this.listEvents = parties as PartyDto[]
+    })
   }
 
-
+  getLink(id?: number) {
+    return `/event-details/${id}`
+  }
 
 }

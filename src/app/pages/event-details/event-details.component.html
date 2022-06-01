@@ -5,23 +5,23 @@
       <img src="../../../assets/party-card.jpg" alt="">
     </figure>
     <section class="card-body">
-      <p class="date">15-02-200</p>
-      <h1>Titulo del Evento</h1>
+      <p class="date">{{partyDetail.date}}</p>
+      <h1>{{partyDetail.event}}</h1>
       <br><br>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta cupiditate, eligendi architecto, omnis labore aut cumque itaque facere impedit recusandae doloribus explicabo quaerat. Ipsam necessitatibus obcaecati nam repellendus enim architecto.</p>
+      <p>{{partyDetail.desciption}}</p>
       <section class="money">
         <h4>Dinero Acumulado</h4>
-        <p>$ 3000</p>
+        <p>{{partyDetail.accumulated}}</p>
       </section>
 
       <section>
-        <a class="btn" routerLink="/join-party/1"><span>Inscribirce</span></a>
+        <a class="btn" [routerLink]="guestForm"><span>Inscribirce</span></a>
       </section>
     </section>
   </article>
   <br>
   <br>
   <section class="guests">
-    <app-guests></app-guests>
+    <app-guests [guest-list]="partyDetail.guestDtos"></app-guests>
   </section>
 </main>

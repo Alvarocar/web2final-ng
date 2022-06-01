@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
+import { GuestServiceService } from '../../services/guest-service.service';
 
 @Component({
   selector: 'app-form-join',
@@ -8,7 +10,8 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class FormJoinComponent implements OnInit {
 
-  constructor() { }
+  constructor(private guest: GuestServiceService, private router: Router,
+     private route: ActivatedRoute) { }
 
   public form = new FormGroup({
     name: new FormControl(''),
@@ -19,4 +22,11 @@ export class FormJoinComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onSubmit() {
+    const id = this.route.snapshot.paramMap.get('id')
+    this.guest.joinGuest({...this.form.getRawValue(), partyId:id})
+    .subscribe(() => {
+      this.router.navigate([`event-details/${id}`])
+    })
+  }
 }

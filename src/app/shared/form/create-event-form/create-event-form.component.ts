@@ -18,7 +18,7 @@ export class CreateEventFormComponent implements OnInit {
   public partyForm = new FormGroup({
     event: new FormControl(''),
     date: new FormControl(''),
-    description: new FormControl(''),
+    desciption: new FormControl(''),
   })
 
   submit() {
